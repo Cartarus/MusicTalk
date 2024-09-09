@@ -1,6 +1,7 @@
 import React from 'react'
 import { IoPersonCircle } from 'react-icons/io5'
 import { SlOptions } from 'react-icons/sl'
+import { DropDownButton } from '../shared/DropDownButton'
 
 export const ProfileBanner = () => {
   return (
@@ -9,7 +10,7 @@ export const ProfileBanner = () => {
             <IoPersonCircle size={20} />
             <p className='text-xs'>CristianG</p>
         </div>
-        <SlOptions  className='cursor-pointer'/>
+        <DropDownButton icon={<SlOptions/>}/>
     </div>
   )
 }

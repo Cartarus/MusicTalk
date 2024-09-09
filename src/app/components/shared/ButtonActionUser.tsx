@@ -8,7 +8,7 @@ interface Props {
 
 export const ButtonActionUser = ({icon,text}:Props) => {
   return (
-    <button className='flex items-center gap-2 bg-blue-500 rounded-md px-2 py-1'>
+    <button className='flex items-center gap-2 bg-slate-500 rounded-md px-2 py-1'>
         {icon}
         {text && <p>{text}</p>}
     </button>

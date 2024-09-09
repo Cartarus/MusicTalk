@@ -9,13 +9,14 @@ export const FeedPost = () => {
 
   const router = useRouter()
 
-  const handleClick = (e :React.MouseEvent<HTMLElement>) => {
-    console.log("Click",e.target)
+  // e :React.MouseEvent<HTMLElement>
+  const handleClick = () => {
     router.push("/post")
   }
 
   return (
-    <div className='bg-blue-950 rounded-xl p-3 cursor-pointer' onClick={handleClick}>
+    <div className='bg-neutral-800 rounded-xl p-3 cursor-pointer' onClick={handleClick}>
+
         <ProfileBanner/>
         <h3 className='my-2 font-medium text-xl'>Titulo del post</h3>
         <hr  className='border-gray-500'/>

@@ -5,11 +5,12 @@ import { PostActionsuser } from '../shared/PostActionsuser'
 import { ProfileBanner } from '../Home/ProfileBanner';
 import { StarRating } from '../shared/StarRating';
 import { Comments } from './Comments';
+import { InputCreateComment } from './InputCreateComment';
 
 export const Post = () => {
 
   return (
-    <div className='bg-blue-950 rounded-xl p-3 cursor-pointer' >
+    <div className='bg-neutral-800 rounded-xl p-3 cursor-pointer' >
         <ProfileBanner/>
         <h3 className='my-2 font-medium text-xl'>Titulo del post</h3>
         <hr  className='border-gray-500'/>
@@ -22,12 +23,14 @@ export const Post = () => {
             <Image 
                 src="https://i.scdn.co/image/ab67616d0000b273cdb645498cd3d8a2db4d05e1" 
                 alt='Imagen del Post' 
-                layout='fill' // Asegura que la imagen ocupe todo el contenedor
-                objectFit='cover' // Ajusta la imagen para que cubra el espacio sin deformarse
-                className='rounded-md' // Opción para redondear las esquinas si lo deseas
+                fill// Asegura que la imagen ocupe todo el contenedor
+                style={{ objectFit: 'cover' }}// Ajusta la imagen para que cubra el espacio sin deformarse
+                className='rounded-md' 
+                priority// Opción para redondear las esquinas si lo deseas
             />
         </div>
         <PostActionsuser/>
+        <InputCreateComment/>
         <Comments/>
     </div>
   )
