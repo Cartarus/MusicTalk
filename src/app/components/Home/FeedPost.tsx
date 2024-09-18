@@ -3,19 +3,12 @@ import Image from 'next/image'
 import React from 'react'
 import { PostActionsuser } from '../shared/PostActionsuser'
 import { ProfileBanner } from './ProfileBanner'
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 export const FeedPost = () => {
 
-  const router = useRouter()
-
-  // e :React.MouseEvent<HTMLElement>
-  const handleClick = () => {
-    router.push("/post")
-  }
-
   return (
-    <div className='bg-neutral-800 rounded-xl p-3 cursor-pointer' onClick={handleClick}>
+    <Link className='bg-neutral-800 rounded-xl p-3 cursor-pointer' href={"/post"}>
 
         <ProfileBanner/>
         <h3 className='my-2 font-medium text-xl'>Titulo del post</h3>
@@ -32,6 +25,6 @@ export const FeedPost = () => {
             />
         </div>
         <PostActionsuser/>
-    </div>
+    </Link>
   )
 }

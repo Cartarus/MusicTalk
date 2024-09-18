@@ -1,20 +1,16 @@
-"use client";
-import { useRouter } from 'next/navigation';
+
+import Link from 'next/link'
 import React from 'react'
 import { SiMusicbrainz } from 'react-icons/si'
 
 export const Logo = () => {
 
-  const router = useRouter()
 
-  const handleClick = () => {
-    router.push('/home')
-  }
   
   return (
-    <div className='flex items-center cursor-pointer' onClick={handleClick}>
+    <Link className='flex items-center cursor-pointer' href={"/home"}>
         <SiMusicbrainz size={ 40 } />
         <p className='hidden sm:block'>MusicTalk</p>
-    </div>
+    </Link>
   )
 }

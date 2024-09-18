@@ -1,22 +1,18 @@
 "use client";
-import { useRouter } from 'next/navigation'
+import Link from 'next/link';
 import React from 'react'
 import { IoPersonCircle } from 'react-icons/io5'
 
 export const ProfileButton = () => {
 
-  const router = useRouter()
-
   // e :React.MouseEvent<HTMLElement>
-  const handleClick = () => {
-    router.push("/profile")
-  }
+  
   return (
  
-        <div className='flex gap-1 items-center cursor-pointer' onClick={handleClick}>
+        <Link href="/profile"className='flex gap-1 items-center cursor-pointer' >
             <IoPersonCircle size={35} />
             <p className='hidden sm:block'>CristianG</p>
-        </div>
+        </Link>
 
   )
 }

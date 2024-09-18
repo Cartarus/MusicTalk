@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import { DropDownButton } from '../shared/DropDownButton';
 import { SlOptions } from 'react-icons/sl'
+import { Reply } from './Reply';
 
 export const SingleComment = () => {
 
@@ -58,6 +59,9 @@ export const SingleComment = () => {
             </button>
         </div>
         <hr className='mb-2 border-neutral-400'/>
+        <Reply/>
+        <Reply/>
+        <Reply/>
     </>
   )
 }
